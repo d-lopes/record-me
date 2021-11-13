@@ -1,0 +1,32 @@
+{
+	"name": "Record Me",
+	"description" : "record the content that you have put into a textarea for later reuse",
+	"version": "0.1.0",
+	"manifest_version": 2,
+	"icons": {
+		"16": "img/logo_16.png",
+		"32": "img/logo_32.png",
+		"64": "img/logo_64.png",
+		"128": "img/logo_128.png"
+	},
+	"browser_action": {
+		"default_popup": "hello.html",
+		"default_icon": "img/logo_16.png"
+	},
+	"content_scripts": [{
+		"matches": [
+			"https://*/Runtime/Runtime/Form/ARActivityReportForm/*"
+		],
+		"js": [
+			"settings.js",
+			"record-me.js"
+		]
+	}],
+	"permissions": [
+		"storage"
+	],
+	"options_ui": {
+		"page": "options.html",
+		"open_in_tab": false
+	}
+}
