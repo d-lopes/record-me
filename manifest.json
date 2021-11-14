@@ -15,18 +15,11 @@
 	},
 	"content_scripts": [{
 		"matches": [
-			"https://*/Runtime/Runtime/Form/ARActivityReportForm/*"
+			"https://digital.mhp.com/Runtime/Runtime/Form/ARActivityReportForm/*"
 		],
 		"js": [
 			"settings.js",
 			"record-me.js"
 		]
-	}],
-	"permissions": [
-		"storage"
-	],
-	"options_ui": {
-		"page": "options.html",
-		"open_in_tab": false
-	}
+	}]
 }
